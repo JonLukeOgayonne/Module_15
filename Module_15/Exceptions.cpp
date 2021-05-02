@@ -26,5 +26,9 @@ int main() {
 	return 0;
 }
 char character(char start, int offset) {
-	return start;
+	if (start < 'A' || start > 'Z' && start < 'a' || start > 'z') {
+		string invalidRangeExpection = " ERROR! Invalid range.\n";
+		throw invalidRangeExpection;
+	}
+		return start;
 }
